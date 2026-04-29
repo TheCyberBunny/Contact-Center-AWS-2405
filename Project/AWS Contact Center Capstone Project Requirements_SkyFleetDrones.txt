@@ -1,0 +1,183 @@
+Contact Center Capstone Project Requirements
+Due: 5/22/2026
+Presentations start at 9AM EST
+
+SkyFleet Drones
+
+SkyFleet Drones is a fast-growing company that rents and services autonomous drones for:
+
+Hospitals
+Construction companies
+Emergency response teams
+Agricultural businesses
+
+Their drones are used for:
+
+Medical supply delivery
+Site inspections
+Emergency mapping
+Crop monitoring
+
+SkyFleet’s customer support is struggling:
+
+Customers report:
+
+Long phone wait times
+No chat support
+Repeating the same information
+Delays in issue resolution
+
+Leadership lacks visibility into:
+
+Customer satisfaction
+Frequent issues
+Agent performance
+
+Support teams need:
+
+Better routing
+Automated customer recognition
+Faster case handling
+Better analytics
+
+
+Project Goal
+
+Your team has been hired to build a cloud contact center solution using Amazon Connect.
+
+The new system must support:
+
+Voice support
+Chat support
+Intelligent routing
+Customer records
+Case management
+Analytics
+Conversational AI
+Backend integration
+
+Each team must:
+
+Use one shared AWS root account
+Each student must log in using:
+An individual IAM user
+
+Each IAM user should have:
+
+AdministratorAccess
+
+This allows:
+
+Accountability
+Safe collaboration
+User-level auditing
+
+1. Create and configure a new Amazon Connect instance for SkyFleet.
+
+Must include:
+Admin user setup
+Telephony enabled
+Basic configuration completed
+
+2. Users and Routing
+
+Create support teams and queues.
+
+Required Queues:
+Technical Support
+Billing Support
+Sales
+Required Users:
+At least 2 agents per profile
+Appropriate routing profiles
+
+3. Voice Contact Flow
+
+Build a main inbound voice flow. The customer should hear a welcome prompt followed by a menu prompt. When pressing different input
+
+Must include:
+- Welcome prompt 
+- Customer Whisper flow that notifies customers the call may be recorded
+- Begin audio recording for later reporting
+- accept input after a menu recording plays. Loop menu response if a user selects to replay the menu
+- Any time the call will disconnect, play an appropriate whisper to the customer (We don't want a call to suddenly drop and for the customer to be confused thinking they were ignored!)
+- All voice prompts should use Amazon Polly
+- This flow should capture contact attributes
+- create case automatically
+- conditional routing for premium vs non-premium
+Menu options:
+-Technical Support
+-Billing
+-Sales
+-Repeat this message
+Queue routing
+Must demonstrate:
+-Interact blocks
+-Set blocks
+-Transfer blocks
+- Check blocks
+- Logic blocks
+
+4. Chat Contact Flow
+
+Build a chat support flow that includes a welcome message, menu choices, and appropriate queue routing.
+
+
+5. Set up Customer Profiles
+
+Enable and configure customer profiles and create at least 4 different customers with relevant details such as name, company, and service tier
+
+6. Configure Amazon Cases
+
+Include at least 2 custom case fields that make sense for SkyFleet (such as drone model or issue severity) and create a custom case template that includes the custom case fields.
+
+7. Amazon Lex Integration
+
+Create an Amazon Lex bot with at least 2 intents: Technical Issue & Billing Issue. Lex must be invoked from a contact flow.
+
+8. Create at least one lambda function that integrates with the contact flow. Examples may be that we lookup the customer tier or return service status. Get creative here and show off what you can do! One of your flows (either the chat or voice) must demonstrate this function in use.
+
+9. Enable Contact Lens and create a dashboard with details about either the voice or chat flow. Remember that we must have contact recording or transcription enabled in one of our flows to make this work! Create at least one rule to detect phrases such as "Drone failed" or "Urgent Issue". This is another chance to get creative and show how advanced your rules can get!
+
+For the Dashboard, include at least:
+Contact volume
+Queue metrics
+Case metric
+^these are flexible and metrics should MAKE SENSE when being grouped on the same dashboard
+
+
+10. Create a power point presentation
+
+Presentations will be MAX 15 minutes per team
+
+Length:
+~5–10 slides
+
+Slide ideas: 
+
+	Slide 1: Overview
+What you built
+High-level system description
+	Slide 2: Architecture
+Voice + Chat
+Key components (Flows, Lex, Lambda, Cases, etc.)
+	Slide 3: Team Process (Agile Focus)
+Explain:
+How you divided work
+How you collaborated
+How you handled challenges
+	Slide 4: Challenges & Solutions
+What problems did you run into?
+How did you solve them?
+	Slide 5: Future Improvements
+“If we had another sprint…”
+Examples:
+Better AI
+Automation
+Improved UX
+
+Live Demonstration should be 3-6 minutes of your presentation! Show me chat flow working, voice flow working IF you were able to claim a phone number(If you are unable to claim a phone number, show me the flow and give a quick run through of the steps), and at least one advanced feature like Lex or Lambda working.
+Show it off like you are proud of it!
+
+Note that as long as slides look professional and you keep your total presentation to 15 minutes or less, feel free to demonstrate more features or add more slides.
+
